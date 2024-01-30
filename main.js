@@ -14,11 +14,14 @@ function getComputerChoice() {
 
 function getUserChoice() {
     var userChoice = prompt("Choose your element!");
-    return userChoice;
+    return userChoice[0].toUpperCase() + userChoice.slice(1).toLowerCase();
 }
 
 var userChoice = getUserChoice();
+console.log(userChoice);
 var computerChoice = getComputerChoice();
+console.log(computerChoice);
+determineWinner(userChoice, computerChoice);
 
 function determineWinner(userChoice, computerChoice) {
     if (userChoice === "Rock" && computerChoice === "Scissors") {
